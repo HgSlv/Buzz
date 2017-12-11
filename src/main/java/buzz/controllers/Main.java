@@ -1,4 +1,4 @@
-package buzz.spark;
+package buzz.controllers;
 
 import static spark.Spark.after;
 import static spark.Spark.exception;
