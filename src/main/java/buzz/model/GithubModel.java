@@ -19,8 +19,8 @@ public class GithubModel {
         PullRequestService service = new PullRequestService(client);
 
         RepositoryId repositoryId = new RepositoryId(//
-            Tools.getLocalProperties().getProperty("github.repository.owner"),//
-            Tools.getLocalProperties().getProperty("github.repository.name")//
+            Tools.getLocalProperties().getProperty("github_repository_owner"),//
+            Tools.getLocalProperties().getProperty("github_repository_name")//
         );
 
         List<PullRequest> openPullRequests = null;
@@ -35,12 +35,16 @@ public class GithubModel {
         return openPullRequests;
     }
 
+
     private static GitHubClient getGithubClient() {
+
         GitHubClient client = new GitHubClient();
+
         client.setCredentials(//
-            Tools.getLocalProperties().getProperty("github.user"),//
-            Tools.getLocalProperties().getProperty("github.password")//
+            Tools.getLocalProperties().getProperty("github_user"),//
+            Tools.getLocalProperties().getProperty("github_password")//
         );
+
         return client;
     }
 

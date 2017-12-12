@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BuzZ Infinity</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intercooler-js/1.2.0/intercooler.min.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BuzZ Infinity</title>
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
+  rel="stylesheet">
+</head>
+<body>
+  <div class="jumbotron text-center">
+    <h1>BuzZ</h1>
+    <p>A status monitor for Team Infinity</p>
+  </div>
+  <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-3" ic-get-from="/pull-requests" ic-trigger-on="load">
-        <i class="fa fa-spinner fa-spin fa-2x"></i> Loading Pull Requests...
+      <div class="col-xs-12 col-md-4" ic-get-from="/pull-requests" ic-trigger-on="load">
+        <i class="fa fa-spinner fa-spin fa-2x"></i>
+        Loading Pull Requests...
       </div>
-      <div class="col-xs-12 col-md-3">.col-xs-12 .col-md-3</div>
-      <div class="col-xs-12 col-md-3">.col-xs-12 .col-md-3</div>
-      <div class="col-xs-12 col-md-3">.col-xs-12 .col-md-3</div>
-	</div>
-  </body>
+      <div class="col-xs-12 col-md-4" ic-get-from="/esf" ic-trigger-on="load">
+        <i class="fa fa-spinner fa-spin fa-2x"></i>
+        Loading ESF Tests...
+      </div>
+      <div class="col-xs-12 col-md-4" ic-get-from="/rats" ic-trigger-on="load">
+        <i class="fa fa-spinner fa-spin fa-2x"></i>
+        Loading Rats... Beware..
+      </div>
+    </div>
+  </div>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+  <!-- Intercooler JS-->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/intercooler-js/1.2.0/intercooler.min.js"></script>
+
+  <!-- our JS-->
+  <script type="text/javascript" src="/js/main.js"></script>
+</body>
 </html>

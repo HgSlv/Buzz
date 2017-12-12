@@ -1,9 +1,10 @@
-    <ul id="todo-list">
-        #foreach($pullRequest in $pullRequests)
-            <li class="#if($pullRequest.complete)completed#end">
-                <div class="view">
-                    <label>$pullRequest.title</label>
-                </div>
-            </li>
-        #end
-    </ul>
+<div class="card">
+  <div class="card-header">Github Open PR's</div>
+  <div class="card-body">
+    #foreach($pullRequest in $pullRequests)
+    <div
+      class="alert #if($pullRequest.mergeable)alert-success #else alert-danger #end">
+      $pullRequest.title - $pullRequest.mergeable</div>
+    #end
+  </div>
+</div>

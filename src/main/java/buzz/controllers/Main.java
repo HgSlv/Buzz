@@ -20,6 +20,9 @@ public class Main {
 
         get ("/pull-requests", (req, res) -> TemplateController.renderPullRequests(req));
 
+        get ("/esf", (req, res) -> TemplateController.renderJiraEsf(req));
+
+        get ("/rats", (req, res) -> TemplateController.renderJiraRats(req));
 
         after((req, res) -> {
             if (res.body() == null) {
