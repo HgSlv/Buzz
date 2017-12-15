@@ -5,6 +5,7 @@ import java.util.Map;
 
 import buzz.model.GithubModel;
 import buzz.model.JenkinsModel;
+import buzz.model.JiraModel;
 import spark.ModelAndView;
 import spark.Request;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -36,12 +37,19 @@ public class TemplateController {
         model.put("esfJob", JenkinsModel.getEsfTests().toString());
         return renderTemplate("templates/esf.vm", model);
     }
-
+    
     public static String renderJiraRats(Request req) {
         Map<String, Object> model = new HashMap<>();
-
+        
         model.put("esfJob", JenkinsModel.getRats().toString());
         return renderTemplate("templates/rats.vm", model);
+    }
+
+    public static String renderJiraIssues(Request req) {
+        Map<String, Object> model = new HashMap<>();
+
+        model.put("jiraName", JiraModel.getTickets());
+        return renderTemplate("templates/jira.vm", model);
     }
 
     private static String renderTemplate(String template, Map<String, Object> model) {

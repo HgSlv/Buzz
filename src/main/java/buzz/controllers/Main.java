@@ -24,6 +24,8 @@ public class Main {
 
         get ("/rats", (req, res) -> TemplateController.renderJiraRats(req));
 
+        get ("/jira", (req, res) -> TemplateController.renderJiraIssues(req));
+
         after((req, res) -> {
             if (res.body() == null) {
                 res.body(TemplateController.renderStatusMonitor(req));

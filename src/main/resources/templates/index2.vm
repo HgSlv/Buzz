@@ -16,17 +16,21 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-4" ic-get-from="/pull-requests" ic-trigger-on="load">
+      <div class="col-xs-12 col-md-3" ic-get-from="/pull-requests" ic-trigger-on="load">
         <i class="fa fa-spinner fa-spin fa-2x"></i>
         Loading Pull Requests...
       </div>
-      <div class="col-xs-12 col-md-4" ic-get-from="/esf" ic-trigger-on="load">
+      <div class="col-xs-12 col-md-3" ic-get-from="/esf" ic-trigger-on="load">
         <i class="fa fa-spinner fa-spin fa-2x"></i>
         Loading ESF Tests...
       </div>
-      <div class="col-xs-12 col-md-4" ic-get-from="/rats" ic-trigger-on="load">
+      <div class="col-xs-12 col-md-3" ic-get-from="/rats" ic-trigger-on="load">
         <i class="fa fa-spinner fa-spin fa-2x"></i>
         Loading Rats... Beware..
+      </div>
+      <div class="col-xs-12 col-md-3" ic-get-from="/jira" ic-trigger-on="load">
+        <i class="fa fa-spinner fa-spin fa-2x"></i>
+        Loading Jira... Fear..
       </div>
     </div>
   </div>
